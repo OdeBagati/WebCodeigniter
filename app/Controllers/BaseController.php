@@ -7,6 +7,27 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\Mdlproduct;
+use App\Models\Mdlcategory;
+use App\Models\Mdlgallery;
+use App\Models\Mdlroute;
+use App\Models\Mdlcustomer;
+use App\Models\Mdlorder;
+use App\Models\Mdldetailorder;
+use App\Models\Mdluser;
+use App\Models\Mdlpage;
+use App\Models\Mdlpromotion;
+use App\Models\Mdlreview;
+use App\Models\Mdlgroup;
+use App\Models\Mdlgroupuser;
+use App\Models\Mdlpoint;
+use App\Models\Mdlpayment;
+use App\Models\Mdlquestion;
+use App\Models\Mdlanswer;
+use App\Models\Mdlexchange;
+use App\Models\Mdlpointexchange;
+use App\Models\Mdlmaster;
+
 /**
  * Class BaseController
  *
@@ -38,6 +59,27 @@ class BaseController extends Controller
 	 */
 	public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
 	{
+		$this->objProduct		= new Mdlproduct;
+		$this->objCategory		= new Mdlcategory;
+		$this->objGallery		= new Mdlgallery;
+		$this->objRoute			= new Mdlroute;
+		$this->objCustomer		= new Mdlcustomer;
+		$this->objOrder			= new Mdlorder;
+		$this->objDetailorder	= new Mdldetailorder;
+		$this->objUser			= new Mdluser;
+		$this->objPage			= new Mdlpage;
+		$this->objPromotion		= new Mdlpromotion;
+		$this->objReview		= new Mdlreview;
+		$this->objGroup			= new Mdlgroup;
+		$this->objGroupUser		= new Mdlgroupuser;
+		$this->objPoint			= new Mdlpoint;
+		$this->objPayment		= new Mdlpayment;
+		$this->objQuestion		= new Mdlquestion;
+		$this->objAnswer		= new Mdlanswer;
+		$this->objExchange		= new Mdlexchange;
+		$this->objPointExchange	= new Mdlpointexchange;
+		$this->objMaster		= new Mdlmaster;
+		
 		$this->validate         = \Config\Services::validation();
         $this->session          = \Config\Services::session();
         $this->request          = \Config\Services::request();

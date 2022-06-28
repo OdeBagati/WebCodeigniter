@@ -67,11 +67,15 @@
 
     <!-- Custom cript -->
     <script>
+        $(document).ready(function() {
+            $('.summernote').summernote();
+        });
+
         $('#summernote').summernote({
-          height: 200,
-          minHeight: null,
-          maxHeight: null,             
-          focus: true
+            height: 200,
+            minHeight: null,
+            maxHeight: null,             
+            focus: true
         });
     </script>
 

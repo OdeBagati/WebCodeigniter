@@ -33,6 +33,23 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$con=mysqli_connect('localhost','root','');
+
+mysqli_select_db($con,'db_website') or die ("Koneksi DB gagal");
+
+$query=mysqli_query($con,"select * from tb_slug");
+
+while($row=mysqli_fetch_array($query))
+{
+    if($row['filters'])
+    {
+        $routes->get($row['slug'],$row['target'],['filter'=>$row['filters']]);
+    }
+    else
+    {
+        $routes->get($row['slug'],$row['target']);
+    }
+}
 
 /*
  * --------------------------------------------------------------------
