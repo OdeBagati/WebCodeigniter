@@ -38,6 +38,9 @@ class BaseController extends Controller
 	 */
 	public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
 	{
+		$this->validate         = \Config\Services::validation();
+        $this->session          = \Config\Services::session();
+        $this->request          = \Config\Services::request();
 		// Do Not Edit This Line
 		parent::initController($request, $response, $logger);
 
