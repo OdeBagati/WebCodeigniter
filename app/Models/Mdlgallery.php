@@ -4,20 +4,20 @@ use CodeIgniter\Model;
 
 class Mdlgallery extends Model
 {
-	protected $table      = 'joyful_gallery';
-    protected $primaryKey = 'idgallery';
+	protected $table      = 'tb_galeri';
+    protected $primaryKey = 'idgaleri';
 
     protected $builder;
 
     function __construct()
     {
     	$db               = \Config\Database::connect();
-		$this->builder    = $db->table('joyful_gallery');
+		$this->builder    = $db->table('tb_galeri');
     }
 
     function getAllData()
     {
-    	$this->builder->join('joyful_product','joyful_product.idproduct=joyful_gallery.idproduct');
+    	$this->builder->join('tb_produk','tb_produk.idproduk=tb_galeri.idproduk');
         return $this->builder->get();
     }
 
@@ -27,19 +27,19 @@ class Mdlgallery extends Model
         return $this->builder->get();
     }
 
-    function getGalByProduct($idproduct)
+    function getGalByProduct($idproduk)
     {
-        $this->builder->where('idproduct',$idproduct);
+        $this->builder->where('idproduk',$idproduk);
         return $this->builder->get();
     }
 
     function saveData($arrSave)
     {
-        if($arrSave['idgallery']>0)
+        if($arrSave['idgaleri']>0)
         {
-            $this->builder->where('idgallery',$arrSave['idgallery']);
+            $this->builder->where('idgaleri',$arrSave['idgaleri']);
             $this->builder->update($arrSave);
-            return $arrSave['idgallery'];
+            return $arrSave['idgaleri'];
         }
         else
         {

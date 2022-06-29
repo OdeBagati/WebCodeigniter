@@ -68,8 +68,8 @@ class Contproduct extends BaseController
                 ],
                 'harga'=>[
                     'label'     =>'Harga',
-                    'rules'     =>'required|greater_than[0]',
-                    'errors'    =>['required'=>'Harga tidak boleh kosong','greater_than[0]'=>'Mau kasi tamunya gratisan?']
+                    'rules'     =>'required|is_natural_no_zero',
+                    'errors'    =>['required'=>'Harga tidak boleh kosong','is_natural_no_zero'=>'Mau kasi tamunya gratisan?']
                 ]
             ];
 
@@ -83,23 +83,16 @@ class Contproduct extends BaseController
                 {
                     $file->move('./assets/img/', $file->getName());
                     $fileName=$file->getName();
-
-                    $namafoto=$this->request->getPost('thumbnail');
-
-                    if($namafoto!="" and $namafoto!="no-image.jpg" and file_exists(realpath(APPPATH . './assets/img/'.$namafoto)))
-                    {
-                        unlink(realpath(APPPATH . './assets/img/'.$namafoto));
-                    }
                 }
                 else
                 {
-                    if($this->request->getPost('thumbnail')=="")
+                    if($this->request->getPost('upload_photo')=="")
                     {
                         $fileName="no-image.jpg";
                     }
                     else
                     {
-                        $fileName=$this->request->getPost('thumbnail');
+                        $fileName=$this->request->getPost('upload_photo');
                     }
                 }
 
@@ -160,7 +153,7 @@ class Contproduct extends BaseController
                 $arrUpdateProduct=array('idslug'=>$idslug);
                 $this->objProduct->updateData($arrUpdateProduct,$idproduk);
 
-                $this->session->setFlashdata('message','Proses penyimpanana data berhasil');
+                $this->session->setFlashdata('message','Proses penyimpanana produk berhasil');
                 return redirect()->to(base_url().'/admin/product-list');
             }
             else
@@ -191,13 +184,14 @@ class Contproduct extends BaseController
         $paramSlug      =array('idslug'=>$idslug);
         $this->objRoute->deleteData($paramSlug);
 
-        if($thumbnail!="" and $thumbnail!="no-image.jpg" and file_exists(realpath(APPPATH . '../assets/img/'.$thumbnail)))
+        if($thumbnail!="" and $thumbnail!="no-image.jpg" and file_exists(realpath(APPPATH . './assets/img/'.$thumbnail)))
         {
-            unlink(realpath(APPPATH . '../assets/img/'.$thumbnail));
+            unlink(realpath(APPPATH . './assets/img/'.$thumbnail));
         }
 
         $this->objProduct->deleteData($paramProduct);
 
+        $this->session->setFlashdata('message','Produk berhasil dihapus');
         return redirect()->to(base_url().'/admin/product-list');
     }
 }

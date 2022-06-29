@@ -21,7 +21,7 @@
 
         <div class="row">
 
-            <?= csrf_field() ?>
+            <?= csrf_field(); ?>
 
             <div class="offset-lg-1 col-lg-4 text-right mt-2">
                 <div class="card h-auto text-center">
@@ -30,7 +30,14 @@
                     </div>
                     <div class="card-body">
                         <p class="p-admin">Foto Produk</p>
-                        <input type="file" name="upload_photo" class="form-control" value="">
+                        <?php
+                            if(isset($thumbnail))
+                            { ?>
+                                <img class="card-img mb-3 w-75" src="<?= base_url(); ?>/assets/img/<?= $thumbnail; ?>">
+                                <?php
+                            }
+                        ?>
+                        <input type="file" name="upload_photo" class="form-control">
                         <p class="p-admin">Alt. Foto</p>
                         <input type="text" name="alt_thumb" class="form-control" value="<?= isset($alt_thumb)?$alt_thumb:set_value('alt_thumb'); ?>">
                     </div>

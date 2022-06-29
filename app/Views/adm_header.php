@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="id">
 <head>
 
     <meta charset="utf-8">
@@ -86,11 +87,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data Management</h6>
-                        <a class="collapse-item" href="<?= route_to('admin/order-list'); ?>">Order List</a>
-                        <a class="collapse-item" href="<?= route_to('admin/product-list'); ?>">Product List</a>
-                        <a class="collapse-item" href="<?= route_to('admin/category-list'); ?>">Category List</a>
-                        <a class="collapse-item" href="<?= route_to('admin/gallery'); ?>">Gallery</a>
-                        <a class="collapse-item" href="<?= route_to('admin/route-list'); ?>">Route List</a>
+                        <a class="collapse-item" href="<?= route_to('admin/product-list'); ?>">List Produk</a>
+                        <a class="collapse-item" href="<?= route_to('admin/category-list'); ?>">List Kategori</a>
+                        <a class="collapse-item" href="<?= route_to('admin/gallery-list'); ?>">List Galeri</a>
+                        <a class="collapse-item" href="<?= route_to('admin/route-list'); ?>">List URL</a>
                     </div>
                 </div>
             </li>

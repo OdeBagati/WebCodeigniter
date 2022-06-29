@@ -14,9 +14,9 @@
     <!-- Content Row -->
     <div class="row m-1">
 
-            <div><p class="h5 text-justify">Halaman ini adalah halaman dimana admin dapat melihat kategori yang tersedia di website. Admin dapat menambahkan, mengubah, atau menghapus kategori di halaman ini</p></div>
+        <div><p class="h5 text-justify">Halaman ini adalah halaman dimana admin dapat melihat kategori yang tersedia di website. Admin dapat menambahkan, mengubah, atau menghapus kategori di halaman ini</p></div>
 
-        </div>
+    </div>
 
     <!-- Category List -->
 
