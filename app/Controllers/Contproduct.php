@@ -15,7 +15,7 @@ class Contproduct extends BaseController
     {
         if($idproduk!=false)
         {
-            $paramProduct       =array('idproduk'=>$idproduct);
+            $paramProduct       =array('idproduk'=>$idproduk);
             $rec                =$this->objProduct->getDataBy($paramProduct)->getRow();
 
             $data['idproduk']           =$rec->idproduk;
@@ -177,5 +177,27 @@ class Contproduct extends BaseController
 
             return view('back_end',$data);
         }
+    }
+
+    function delete($idproduk)
+    {
+        $paramProduct   =array('idproduk'=>$idproduk);
+        $rec            =$this->objProduct->getDataBy($paramProduct)->getRow();
+
+        $idproduk       =$rec->idproduk;
+        $idslug         =$rec->idslug;
+        $thumbnail      =$rec->thumbnail;
+
+        $paramSlug      =array('idslug'=>$idslug);
+        $this->objRoute->deleteData($paramSlug);
+
+        if($thumbnail!="" and $thumbnail!="no-image.jpg" and file_exists(realpath(APPPATH . '../assets/img/'.$thumbnail)))
+        {
+            unlink(realpath(APPPATH . '../assets/img/'.$thumbnail));
+        }
+
+        $this->objProduct->deleteData($paramProduct);
+
+        return redirect()->to(base_url().'/admin/product-list');
     }
 }

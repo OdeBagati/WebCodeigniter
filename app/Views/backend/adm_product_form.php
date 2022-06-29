@@ -8,7 +8,7 @@
 
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="<?= route_to('admin'); ?>">Dashboard</a>
-        <li class="breadcrumb-item"><a href="<?= route_to('admin/promotion-list'); ?>">List Produk</a></li>
+        <li class="breadcrumb-item"><a href="<?= route_to('admin/product-list'); ?>">List Produk</a></li>
         <li class="breadcrumb-item active">Edit Produk</li>
     </ol>
 
@@ -32,7 +32,7 @@
                         <p class="p-admin">Foto Produk</p>
                         <input type="file" name="upload_photo" class="form-control" value="">
                         <p class="p-admin">Alt. Foto</p>
-                        <input type="text" name="alt_thumb" class="form-control" value="">
+                        <input type="text" name="alt_thumb" class="form-control" value="<?= isset($alt_thumb)?$alt_thumb:set_value('alt_thumb'); ?>">
                     </div>
                 </div>   
             </div>
@@ -43,9 +43,9 @@
                         <p class="h4 text-white">Info Produk</p>
                     </div>
                     <div class="card-body">
-                        <input type="hidden" name="idproduk" class="form-control" value="">
+                        <input type="hidden" name="idproduk" class="form-control" value="<?= isset($idproduk)?$idproduk:set_value('idproduk'); ?>">
                         <p class="p-admin">Nama Produk</p>
-                        <input type="text" name="nama_produk" class="form-control" value="">
+                        <input type="text" name="nama_produk" class="form-control" value="<?= isset($nama_produk)?$nama_produk:set_value('nama_produk'); ?>">
                         <p class="p-admin">Kategori</p>
                         <select name="idkategori" class="form-control">
                         <?php
@@ -62,12 +62,12 @@
                         <p class="p-admin">Harga</p>
                         <input type="number" name="harga" class="form-control" value="<?= isset($harga)?$harga:set_value('harga'); ?>">
                         <p class="p-admin">Min. Kapasitas</p>
-                        <input type="number" name="min_kapasitas" class="form-control" value="">
+                        <input type="number" name="min_kapasitas" class="form-control" value="<?= isset($min_kapasitas)?$min_kapasitas:set_value('min_kapasitas'); ?>">
                         <p class="p-admin">Durasi</p>
-                        <input type="text" name="durasi" class="form-control" value="">
+                        <input type="text" name="durasi" class="form-control" value="<?= isset($durasi)?$durasi:set_value('durasi'); ?>">
                         <p class="p-admin">URL Produk</p>
-                        <input type="text" name="url_produk" class="form-control" value="">
-                        <input type="hidden" name="idslug" class="form-control" value="">
+                        <input type="text" name="url_produk" class="form-control" value="<?= isset($url_produk)?$url_produk:set_value('url_produk'); ?>">
+                        <input type="hidden" name="idslug" class="form-control" value="<?= isset($idslug)?$idslug:set_value('idslug'); ?>">
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Penjelasan Singkat</label>
                             <div class="col-xl-8 col-md-6">
-                                <input type="text" name="penjelasan_singkat" class="form-control" value="">
+                                <input type="text" name="penjelasan_singkat" class="form-control" value="<?= isset($penjelasan_singkat)?$penjelasan_singkat:set_value('penjelasan_singkat'); ?>">
                             </div>
                         </div>
 
@@ -141,21 +141,21 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Judul SEO</label>
                             <div class="col-xl-8 col-md-6">
-                                <input type="text" name="judul_seo" class="form-control" value="">
+                                <input type="text" name="judul_seo" class="form-control" value="<?= isset($judul_seo)?$judul_seo:set_value('judul_seo'); ?>">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Deskripsi SEO</label>
                             <div class="col-xl-8 col-md-6">
-                                <input type="text" name="deskripsi_seo" class="form-control" value="">
+                                <input type="text" name="deskripsi_seo" class="form-control" value="<?= isset($deskripsi_seo)?$deskripsi_seo:set_value('deskripsi_seo'); ?>">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Keyowrd SEO</label>
                             <div class="col-xl-8 col-md-6">
-                                <input type="text" name="keyword_seo" class="form-control" value="">
+                                <input type="text" name="keyword_seo" class="form-control" value="<?= isset($keyword_seo)?$keyword_seo:set_value('keyword_seo'); ?>">
                             </div>
                         </div>
 

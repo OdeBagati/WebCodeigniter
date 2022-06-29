@@ -80,9 +80,11 @@ class BaseController extends Controller
 		$this->objPointExchange	= new Mdlpointexchange;
 		$this->objMaster		= new Mdlmaster;
 		
-		$this->validate         = \Config\Services::validation();
+		$this->validation 		=\Config\Services::validation();
         $this->session          = \Config\Services::session();
         $this->request          = \Config\Services::request();
+
+        helper(['url','form']);
 		// Do Not Edit This Line
 		parent::initController($request, $response, $logger);
 
