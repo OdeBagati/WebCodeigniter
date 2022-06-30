@@ -44,7 +44,7 @@ class Mdlgallery extends Model
         else
         {
             $this->builder->insert($arrSave);
-            return $this->db->insertID();
+            return $this->builder->insert($arrSave);
         }
     }
 
