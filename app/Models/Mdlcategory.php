@@ -32,6 +32,13 @@ class Mdlcategory extends Model
     	return $this->builder->get();
     }
 
+    function getCatwithParent($param)
+    {
+        $this->builder->where('parent >',$param);
+
+        return $this->builder->get();
+    }
+
     function getCatBy($param)
     {
         $this->builder->whereIn('idkategori',$param);
@@ -141,7 +148,7 @@ class Mdlcategory extends Model
     {
         $query  = $this->db->query
         ('
-            SELECT cat.idkategori , cat.nama_kategori , cat.deskripsi , category.nama_kategori as parent FROM tb_kategori as cat
+            SELECT cat.idkategori , cat.nama_kategori , cat.thumbnail , cat.deskripsi , category.nama_kategori as parent FROM tb_kategori as cat
             LEFT join tb_kategori as category on category.idkategori = cat.parent'
         );
         

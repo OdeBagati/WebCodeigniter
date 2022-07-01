@@ -83,14 +83,14 @@ class Contcategory extends BaseController
                         'filters'       =>''
                     );
 
-                    $idroute=$this->objRoute->updateData($arrRoute,$idslug);
+                    $idslug=$this->objRoute->updateData($arrRoute,$idslug);
                 }
                 else
                 {
                     $arrRoute=array(
                         'idslug'        =>'',
                         'slug'          =>$slug,
-                        'target'        =>'Contfrontend::category/'.$idkategori,
+                        'target'        =>'Contfrontend::category/'.$this->request->getPost('idkategori'),
                         'filters'       =>''
                     );
 

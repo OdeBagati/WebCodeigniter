@@ -32,6 +32,7 @@
                             <th>No.</th>
                             <th>Nama Kategori</th>
                             <th>Parent</th>
+                            <th>Foto</th>
                             <th>Deskripsi</th>
                             <th>Aksi</th>
                         </tr>
@@ -41,6 +42,7 @@
                             <th>No.</th>
                             <th>Nama Kategori</th>
                             <th>Parent</th>
+                            <th>Foto</th>
                             <th>Deskripsi</th>
                             <th>Aksi</th>
                         </tr>
@@ -54,6 +56,9 @@
                                 <td><?= $no; ?></td>
                                 <td><?= $itemKategori['nama_kategori']; ?></td>
                                 <td><?= is_null($itemKategori['parent'])?"No Parent" : $itemKategori['parent']; ?></td>
+                                <td>
+                                    <img class="card-img-top img-admin" src="<?= base_url() ?>/assets/img/<?= $itemKategori['thumbnail']; ?>">
+                                </td>
                                 <td><?= $itemKategori['deskripsi']; ?></td>
                                 <td>
                                     <?= 

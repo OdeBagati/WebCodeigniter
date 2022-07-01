@@ -124,3 +124,8 @@ body{
 	text-align: left; 
 	margin-top: 0.5rem !important;
 }
+
+.img-admin{
+	max-width: 150px;
+	max-height: 150px;
+}
