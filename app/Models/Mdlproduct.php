@@ -28,6 +28,12 @@ class Mdlproduct extends Model
     	return $this->builder->get();
     }
 
+    function getTotalProduct($param)
+    {
+        $this->builder->selectCount('idproduk')->where($param);
+        return $this->builder->get();
+    }
+
     function getChangeItem($param)
     {
         $this->builder->where('harga <=',$param);

@@ -8,16 +8,20 @@
     <meta name="keywords" content="New Body" />
     <meta name="viewport" content="width=device-width, initial-scale=1, srink-to-fit=no"/>
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/fontawesome.min.css'); ?>" />
-    <link href="<?= base_url('assets/css/owl.carousel.min.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.5.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/styles.css'); ?>" />
 
     <script async src="https://cse.google.com/cse.js?cx=004566218386616212635:ht7uqmd5ezx"></script>
-
-    <script type="text/javascript" src="<?= base_url(); ?>/assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>/assets/js/main.js"></script>
     
 </head>
 <body>
@@ -62,6 +66,7 @@
             </div>
         </div>
     </nav>
+    <!-- End Navbar -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -77,22 +82,89 @@
             </div>
         </div>
     </div>
+    <!-- End Modal-->
 
     <!-- Cover -->
+    <div class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark cover-homepage"
+    style="background-image: url(<?= base_url(); ?>/assets/img/ulun-danu-temple.jpg);">
+        <div class="container">
+            <div class="row align-items-center d-flex justify-content-between">
+                <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 text-cover">
+                    <h1 class="text-white fw-bold mb-3 mt-5 display-4">Bali Tour and Travel</h1>
+                    <p class="lead text-white">A collection of coded HTML and CSS elements to help your build your new website. Clean design, fully responsive and based on Bootstrap 5.</p>
+                    <div class="d-flex mt-3 mb-1">
+                    <!-- <a class="btn btn-primary btn-raised text-uppercase btn-lg  mt-md-3 "
+                    href="#" role="button">Download Now</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
     
     <div class="container">
 
-        <!-- Kategori -->
-        <div class="row mt-3">
+        <!-- List Kategori -->
+        <div class="row mb-3 mt-3">
+            <div class="col-12">
+                <h3 class="span-title text-center"><span>find activity here</span></h3>
+            </div>
+        </div>
+
+        
+        <!-- End List Kategori -->
+        <div class="row mt-3 slider">
             <?php foreach($dataKategori as $key => $itemKategori) : ?>
-            <div class="col col-xl-2 col-md-4 col-sm-6">
-                <a href="#" class="text-decoration-none link-dark">
-                <img class="cat-img" src="<?= base_url(); ?>/assets/img/<?= $itemKategori->thumbnail; ?>">
-                <h5 class="cat-title mt-1"><b><?= $itemKategori->nama_kategori; ?></b></h5>
-                <p class="text-secondary">69 product</p>
-                </a>
+            <div class="col-12 p-3">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <a href="#" class="text-decoration-none link-dark">
+                            <img class="cat-img" src="<?= base_url(); ?>/assets/img/<?= $itemKategori->thumbnail; ?>">
+                            <h3 class="cat-title mt-2"><b><?= $itemKategori->nama_kategori; ?></b></h3>
+                        </a>
+                    </div>
+                </div>
             </div>
             <?php endforeach; ?>
+        </div>
+        
+        <!-- End List Kategori -->
+
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <h3 class="span-title"><span>Why Choose Us?</span></h3>
+            </div>
+        </div>
+
+        <div class="row text-center mt-3">
+            
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <i class="fa-solid fa-dollar-sign text-info icon"></i>
+                        <h3 class="cat-title mt-2"><b>Cheap Price</b></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <i class="fa-solid fa-map-location-dot text-info icon"></i>
+                        <h3 class="cat-title mt-2"><b>Many Option</b></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <i class="fa-solid fa-user-tie text-info icon"></i>
+                        <h3 class="cat-title mt-2"><b>Professional</b></h3>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>

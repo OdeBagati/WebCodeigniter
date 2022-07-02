@@ -2,8 +2,9 @@
 
 :root{
 	--white:  #FFF;
-	--gray: #f2f2f2;
+	--grey: #f2f2f2;
 	--more-grey: #727272;
+	--light-blue: #00CCFF;
 }
 
 /*Front end CSS*/
@@ -12,9 +13,34 @@ body{
 	font-family: 'Lato', sans-serif;
 }
 
+.cover-homepage{
+	min-height: 50vh;
+	background-position: 50% 25%;
+	background-size: cover;
+}
+
+.text-cover{
+	text-shadow: 2px 2px #0000;
+}
+	.text-cover p{
+		font-weight: 400;
+	}
+
+.span-title{
+	border-bottom:solid 1px var(--more-grey);
+	padding-bottom:10px;
+	margin-bottom:15px;
+	color:var(--light-blue);
+	text-transform:uppercase;
+}
+	.span-title span{
+		border-bottom:solid 0.25rem var(--light-blue);
+		padding-bottom:0.5rem;
+	}
+
 .cat-img{
-	max-width: 200px;
-	max-height: 200px;
+	max-width: 150px;
+	max-height: 150px;
 }
 
 .cat-title{

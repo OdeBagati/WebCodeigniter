@@ -21,7 +21,7 @@ class Mdlcategory extends Model
         $this->builder = $this->db->table('tb_kategori');
     }
 
-    function getAllCat()
+    function getAllData()
     {
         return $this->builder->get();
     }
