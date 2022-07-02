@@ -39,12 +39,19 @@ body{
 	}
 
 .cat-img{
-	max-width: 150px;
+	margin: auto;
+  width: 50%;
+  max-width: 150px;
 	max-height: 150px;
 }
 
 .cat-title{
 	margin-bottom: -5px;
+}
+
+.icon{
+	height: 5rem;
+	width: 5rem;
 }
 
 .text-decoration-none {
@@ -88,6 +95,8 @@ body{
 
 @media (max-width:320px){
 	.cat-img{
+		margin: auto;
+		width: 50%;
 		max-width: 100%;
 		max-height: 100%;
 	}
@@ -104,6 +113,8 @@ body{
 
 @media (max-width:480px){
 	.cat_img{
+		margin: auto;
+		width: 50%;
 		max-width: 100%;
 		max-height: 100%;
 	}
@@ -120,6 +131,8 @@ body{
 
 @media (max-width:600px){
 	.cat-img{
+		margin: auto;
+		width: 50%;
 		max-width: 90%;
 		max-height: 90%;
 	}
@@ -132,6 +145,8 @@ body{
 
 @media (max-width:1200px){
 	.cat-img{
+		margin: auto;
+  	width: 50%;
 		max-width: 88%;
 		max-height: 88%;
 	}
