@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, srink-to-fit=no"/>
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/slick.min.css'); ?>" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/fontawesome.min.css'); ?>" />
@@ -18,7 +18,7 @@
 
     <script async src="https://cse.google.com/cse.js?cx=004566218386616212635:ht7uqmd5ezx"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="<?= base_url(); ?>/assets/js/slick.min.js">"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/fontawesome.min.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/main.js"></script>
@@ -167,6 +167,65 @@
 
         </div>
 
+    </div>
+
+    <!-- Footer -->
+    
+    <footer class="container pt-4 my-md-5 pt-md-5 border-top mb-0 mt-3">
+        <div class="row">
+            <div class="col-12 col-md">
+                <a href="<?= base_url(); ?>">
+                    <img src="<?= base_url(); ?>/assets/img/bali-indah.png" style="width: 100px; height: 100px;" />
+                </a>
+                <small class="d-block mb-3 mt-3 text-muted">© 2021-<script>document.write(new Date().getFullYear());</script></small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Watersport Package</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="<?= route_to('watersport-single-activity'); ?>">Single Activity</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="<?= route_to('watersport-packages'); ?>">Watersport Packages</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="<?= route_to('watersport-seawalker-packages'); ?>">Seawalker Packages</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Adventure</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Cycling</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Elephant Ride</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">ATV Ride</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Tour</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted" href="#">Tour 1</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Tour 2</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Tour 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="text-center py-3 copyright bg-primary text-white">Copyright &copy;
+        <a href="<?= base_url(); ?>" class="a-footer text-white">Joyfulbali.com <script>document.write(new Date().getFullYear());</script> </a>
     </div>
     
 </body>
