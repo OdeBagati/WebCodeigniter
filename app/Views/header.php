@@ -10,7 +10,7 @@
 
     
     <link rel="stylesheet" href="<?= base_url('assets/css/slick.min.css'); ?>" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/slick.theme.min.css'); ?>" />
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/fontawesome.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.5.min.css'); ?>" />
@@ -189,7 +189,7 @@
                         <a class="text-muted" href="<?= route_to('watersport-packages'); ?>">Watersport Packages</a>
                     </li>
                     <li>
-                        <a class="text-muted" href="<?= route_to('watersport-seawalker-packages'); ?>">Seawalker Packages</a>
+                        <a class="text-muted" href="<?= route_to('watersport-seawalker-packages'); ?>">Seawalker</a>
                     </li>
                 </ul>
             </div>
@@ -197,10 +197,10 @@
                 <h5>Adventure</h5>
                 <ul class="list-unstyled text-small">
                     <li>
-                        <a class="text-muted" href="#">Cycling</a>
+                        <a class="text-muted" href="#">Rafting</a>
                     </li>
                     <li>
-                        <a class="text-muted" href="#">Elephant Ride</a>
+                        <a class="text-muted" href="#">Trekking</a>
                     </li>
                     <li>
                         <a class="text-muted" href="#">ATV Ride</a>
@@ -211,13 +211,10 @@
                 <h5>Tour</h5>
                 <ul class="list-unstyled text-small">
                     <li>
-                        <a class="text-muted" href="#">Tour 1</a>
+                        <a class="text-muted" href="#">Full Day Tour</a>
                     </li>
                     <li>
-                        <a class="text-muted" href="#">Tour 2</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Tour 3</a>
+                        <a class="text-muted" href="#">Half Day Tour</a>
                     </li>
                 </ul>
             </div>
