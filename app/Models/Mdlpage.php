@@ -5,15 +5,15 @@ use CodeIgniter\Model;
 
 class Mdlpage extends Model
 {
-	protected $table      = 'joyful_page';
-    protected $primaryKey = 'idpage';
+	protected $table      = 'tb_halaman';
+    protected $primaryKey = 'idhalaman';
 
     protected $builder;
 
     function __construct()
     {
     	$db      = \Config\Database::connect();
-		$this->builder = $db->table('joyful_page');
+		$this->builder = $db->table('tb_halaman');
     }
 
     function getAllData()
@@ -21,9 +21,9 @@ class Mdlpage extends Model
     	return $this->builder->get();
     }
 
-    function getDataBy($idpage)
+    function getDataBy($param)
     {
-        $this->builder->where('idpage',$idpage);
+        $this->builder->where($param);
         return $this->builder->get();
     }
 
