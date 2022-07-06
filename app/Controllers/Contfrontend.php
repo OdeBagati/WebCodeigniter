@@ -40,4 +40,16 @@ class Contfrontend extends BaseController
 
 		return view('front_end',$data);
 	}
+
+	function product()
+	{
+		$data['main_menu']		=$this->objCategory->getMenuCat();
+		$data['page']			='product_page';
+
+		$data['judul_seo']		='product_page';
+		$data['deskripsi_seo']	='product_page';
+		$data['keyword_seo']	='product_page';
+
+		return view('front_end',$data);
+	}
 }

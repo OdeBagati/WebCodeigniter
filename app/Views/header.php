@@ -8,6 +8,7 @@
     <meta name="keywords" content="<?= $keyword_seo; ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, srink-to-fit=no"/>
 
+    <link rel="stylesheet" href="<?= base_url('assets/css/lightslider.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/slick.min.css'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/slick.theme.min.css'); ?>" />
 

@@ -56,6 +56,7 @@
 
     <script async src="https://cse.google.com/cse.js?cx=004566218386616212635:ht7uqmd5ezx"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/lightslider.js">"></script>
     <script src="<?= base_url(); ?>/assets/js/slick.min.js">"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/js/fontawesome.min.js"></script>

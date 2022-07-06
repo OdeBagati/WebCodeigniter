@@ -170,3 +170,20 @@ body{
 	max-width: 150px;
 	max-height: 150px;
 }
+
+.ul-light{
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.ul-light li{
+    display: block;
+    float: left;
+    margin-right: 0px;
+    cursor:pointer;
+}
+.ul-light img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
