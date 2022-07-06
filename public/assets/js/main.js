@@ -35,13 +35,17 @@ $(document).ready(function() {
   });
 });
 
-$('#lightSlider').lightSlider({
-  gallery: true,
-  item: 1,
-  loop:true,
-  slideMargin: 0,
-  thumbItem: 9,
-  speed: 500,
-  auto: true,
-  loop: true,
+$(document).ready(function() {
+  $("#lightSlider").lightSlider({
+    gallery: true,
+    item: 1,
+    loop:true,
+    slideMargin: 0,
+    thumbItem: 9,
+    speed: 750,
+    auto: true,
+    enableTouch:true,
+    enableDrag:true,
+    freeMove:true
+  }); 
 });
