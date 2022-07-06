@@ -17,24 +17,24 @@
 		<div class="col-lg-5 col-md-6 col-12">
 			<ul class="ul-light" id="lightSlider">
 		        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-1.jpg">
-		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-1.jpg" class="rounded-3" />
-		            <h5 class="text-start mt-1">Nama Foto</h5>
+		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-1.jpg" class="rounded-3 d-block w-100" />
+		            <h5 class="text-center mt-1">Nama Foto</h5>
 		        </li>
 		        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-2.jpg">
-		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-2.jpg" class="rounded-3" />
-		            <h5 class="text-start mt-1">Nama Foto</h5>
+		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-2.jpg" class="rounded-3 d-block w-100" />
+		            <h5 class="text-center mt-1">Nama Foto</h5>
 		        </li>
 		        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-3.jpg">
-		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-3.jpg" class="rounded-3" />
-		            <h5 class="text-start mt-1">Nama Foto</h5>
+		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-3.jpg" class="rounded-3 d-block w-100" />
+		            <h5 class="text-center mt-1">Nama Foto</h5>
 		        </li>
 		        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-4.jpg">
-		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-4.jpg" class="rounded-3" />
-		            <h5 class="text-start mt-1">Nama Foto</h5>
+		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-4.jpg" class="rounded-3 d-block w-100" />
+		            <h5 class="text-center mt-1">Nama Foto</h5>
 		        </li>
 		        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-5.jpg">
-		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-5.jpg" class="rounded-3" />
-		            <h5 class="text-start mt-1">Nama Foto</h5>
+		            <img src="https://sachinchoolur.github.io/lightslider/img/cS-5.jpg" class="rounded-3 d-block w-100" />
+		            <h5 class="text-center mt-1">Nama Foto</h5>
 		        </li>
 		    </ul>
 		</div>
