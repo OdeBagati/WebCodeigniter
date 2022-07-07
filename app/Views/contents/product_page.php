@@ -85,9 +85,12 @@
         			<h2 style=" font-size:20px;" class="mb-1">You May Also Like</h2>
                     <div class="dropdown-divider"></div>
                     <ul class="recommendation">
-                    	<li><a href="#" class="text-decoration-none">Produk 1</a></li>
-                    	<li><a href="#" class="text-decoration-none">Produk 2</a></li>
-                    	<li><a href="#" class="text-decoration-none">Produk 3</a></li>
+                    	<?php
+                            foreach ($produkList->getResult() as $listProduk)
+                            {
+                                echo '<li>'.anchor($listProduk->url_produk,$listProduk->nama_produk,array('class'=>'text-decoration-none')).'</li>';
+                            }
+                        ?>
                     </ul>
         		</div>
         	</div>

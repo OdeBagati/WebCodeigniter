@@ -31,15 +31,15 @@
                     <div class="card-body">
                         <p class="p-admin">Foto Produk</p>
                         <?php
-                            if(isset($thumbnail))
+                            if(isset($foto_produk))
                             { ?>
-                                <img class="card-img mb-3 w-75" src="<?= base_url(); ?>/assets/img/<?= $thumbnail; ?>">
+                                <img class="card-img mb-3 w-75" src="<?= base_url(); ?>/assets/img/<?= $foto_produk; ?>">
                                 <?php
                             }
                         ?>
                         <input type="file" name="upload_photo" class="form-control">
                         <p class="p-admin">Alt. Foto</p>
-                        <input type="text" name="alt_thumb" class="form-control" value="<?= isset($alt_thumb)?$alt_thumb:set_value('alt_thumb'); ?>">
+                        <input type="text" name="alt_thumb" class="form-control" value="<?= isset($alt_foto)?$alt_foto:set_value('alt_foto'); ?>">
                     </div>
                 </div>   
             </div>
@@ -98,7 +98,7 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Deskripsi</label>
                             <div class="col-xl-8 col-md-6">
-                                <textarea class="summernote" name="deskripsi" class="tinyMCE form-control" rows="3"></textarea>
+                                <textarea name="deskripsi" class="summernote form-control" rows="3"></textarea>
                                 <div class="button_set mt-1">
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Harga Termasuk</label>
                             <div class="col-xl-8 col-md-6">
-                                <textarea class="summernote" name="harga_termasuk" class="tinyMCE form-control" rows="3"></textarea>
+                                <textarea name="harga_termasuk" class="summernote form-control" rows="3"></textarea>
                                 <div class="button_set mt-1">
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Harga Tidak Termasuk</label>
                             <div class="col-xl-8 col-md-6">
-                                <textarea class="summernote" name="harga_diluar" class="tinyMCE form-control" rows="3"></textarea>
+                                <textarea name="harga_diluar" class="summernote form-control" rows="3"></textarea>
                                 <div class="button_set mt-1">
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Info Tambahan</label>
                             <div class="col-xl-8 col-md-6">
-                                <textarea class="summernote" name="info_tambahan" class="tinyMCE form-control" rows="3"></textarea>
+                                <textarea name="info_tambahan" class="summernote form-control" rows="3"></textarea>
                                 <div class="button_set mt-1">
                                 </div>
                             </div>

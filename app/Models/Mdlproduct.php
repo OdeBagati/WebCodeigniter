@@ -22,9 +22,15 @@ class Mdlproduct extends Model
     	return $this->builder->get();
     }
 
-    function getDataBy($param)
+    function getDataNCat($param)
     {
         $this->builder->join('tb_kategori','tb_kategori.idkategori=tb_produk.idkategori')->where($param);
+        return $this->builder->get();
+    }
+
+    function getDataBy($param)
+    {
+        $this->builder->where($param);
     	return $this->builder->get();
     }
 

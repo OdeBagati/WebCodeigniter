@@ -20,8 +20,8 @@ class Contproduct extends BaseController
 
             $data['idproduk']               =$rec->idproduk;
             $data['nama_produk']            =$rec->nama_produk;
-            $data['foto_produk']            =$rec->thumbnail;
-            $data['alt_foto']               =$rec->alt_thumb;
+            $data['foto_produk']            =$rec->foto_produk;
+            $data['alt_foto']               =$rec->alt_foto;
             $data['penjelasan_singkat']     =$rec->penjelasan_singkat;
             $data['deskripsi_produk']       =$rec->deskripsi;
             $data['min_kapasitas']          =$rec->min_kapasitas;
@@ -106,18 +106,18 @@ class Contproduct extends BaseController
                 $dataSave   =array(
                     'idproduk'          =>$this->request->getPost('idproduk'),
                     'nama_produk'       =>$this->request->getPost('nama_produk'),
-                    'thumbnail'         =>$fileName,
-                    'alt_thumb'         =>$this->request->getPost('alt_thumb'),
+                    'foto_produk'       =>$fileName,
+                    'alt_foto'          =>$this->request->getPost('alt_thumb'),
                     'penjelasan_singkat'=>$this->request->getPost('penjelasan_singkat'),
-                    'deskripsi'         =>$this->request->getPost('deskripsi'),
+                    'deskripsi_produk'  =>$this->request->getPost('deskripsi'),
                     'min_kapasitas'     =>$this->request->getPost('min_kapasitas'),
                     'durasi'            =>$this->request->getPost('durasi'),
                     'harga'             =>$this->request->getPost('harga'),
                     'harga_termasuk'    =>$this->request->getPost('harga_termasuk'),
                     'harga_diluar'      =>$this->request->getPost('harga_diluar'),
-                    'judul_seo'         =>$this->request->getPost('judul_seo'),
-                    'deskripsi_seo'     =>$this->request->getPost('deskripsi_seo'),
-                    'keyword_seo'       =>$this->request->getPost('keyword_seo'),
+                    'judul_seo_produk'  =>$this->request->getPost('judul_seo'),
+                    'deskripsi_seo_produk'=>$this->request->getPost('deskripsi_seo'),
+                    'keyword_seo_produk'=>$this->request->getPost('keyword_seo'),
                     'idkategori'        =>$this->request->getPost('idkategori'),
                     'idslug'            =>$this->request->getPost('idslug'),
                     'url_produk'        =>$slug
