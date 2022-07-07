@@ -56,7 +56,18 @@
                         <div class="form-group row">
                             <label class="offset-lg-1 col-xl-2 col-md-2 form-label">Produk</label>
                             <div class="col-xl-6 col-md-6">
-                                <input type="text" name="idproduk" class="form-control" value="<?= isset($idproduk)?$idproduk:set_value('idproduk'); ?>">
+                                <select name="idproduk" class="form-control">
+                                <?php
+                                use App\Models\Mdlproduct;
+                                $this->objProduct=new Mdlproduct;
+                                $dataGallery=$this->objProduct->getAllProdForAdm();
+
+                                foreach ($dataGallery as $itemGallery => $product)
+                                {
+                                    echo '<option'.set_select('idproduk',$product['idproduk'],true).' value="'.$product['idproduk'].'">'.$product['nama_produk'].'</option>';
+                                }
+                                ?>
+                                </select>
                             </div>
                         </div>
 

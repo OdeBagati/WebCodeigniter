@@ -18,22 +18,22 @@ class Contproduct extends BaseController
             $paramProduct       =array('idproduk'=>$idproduk);
             $rec                =$this->objProduct->getDataBy($paramProduct)->getRow();
 
-            $data['idproduk']           =$rec->idproduk;
-            $data['nama_produk']        =$rec->nama_produk;
-            $data['thumbnail']          =$rec->thumbnail;
-            $data['alt_thumb']          =$rec->alt_thumb;
-            $data['penjelasan_singkat'] =$rec->penjelasan_singkat;
-            $data['deskripsi']          =$rec->deskripsi;
-            $data['min_kapasitas']      =$rec->min_kapasitas;
-            $data['harga']              =$rec->harga;
-            $data['harga_termasuk']     =$rec->harga_termasuk;
-            $data['harga_diluar']       =$rec->harga_diluar;
-            $data['durasi']             =$rec->durasi;
-            $data['info_tambahan']      =$rec->info_tambahan;
-            $data['judul_seo']          =$rec->judul_seo;
-            $data['deskripsi_seo']      =$rec->deskripsi_seo;
-            $data['keyword_seo']        =$rec->keyword_seo;
-            $data['idkategori']         =$rec->idkategori;
+            $data['idproduk']               =$rec->idproduk;
+            $data['nama_produk']            =$rec->nama_produk;
+            $data['foto_produk']            =$rec->thumbnail;
+            $data['alt_foto']               =$rec->alt_thumb;
+            $data['penjelasan_singkat']     =$rec->penjelasan_singkat;
+            $data['deskripsi_produk']       =$rec->deskripsi;
+            $data['min_kapasitas']          =$rec->min_kapasitas;
+            $data['harga']                  =$rec->harga;
+            $data['harga_termasuk']         =$rec->harga_termasuk;
+            $data['harga_diluar']           =$rec->harga_diluar;
+            $data['durasi']                 =$rec->durasi;
+            $data['info_tambahan']          =$rec->info_tambahan;
+            $data['judul_seo_produk']       =$rec->judul_seo;
+            $data['deskripsi_seo_produk']   =$rec->deskripsi_seo;
+            $data['keyword_seo_produk']     =$rec->keyword_seo;
+            $data['idkategori']             =$rec->idkategori;
             $posisi1=strrpos($rec->url_produk,'/');
             $posisi2=strrpos($rec->url_produk,'/',$posisi1+1);
 
@@ -102,6 +102,7 @@ class Contproduct extends BaseController
                 $itemslug=str_replace(" ", "-", $this->request->getPost('url_produk'));
                 $slug=$dataCat->url_kategori.'/'.strtolower($itemslug);
 
+                // Save Data Produk
                 $dataSave   =array(
                     'idproduk'          =>$this->request->getPost('idproduk'),
                     'nama_produk'       =>$this->request->getPost('nama_produk'),
@@ -123,6 +124,18 @@ class Contproduct extends BaseController
                 );
 
                 $idproduk       =$this->objProduct->saveData($dataSave);
+
+                // Save Foto ke Galeri
+                $saveGallery    =array(
+                    'idgaleri'  =>'',
+                    'foto'      =>$fileName,
+                    'alt_foto'  =>$this->request->getPost('alt_thumb'),
+                    'idproduk'  =>$idproduk
+                );
+
+                $this->objGallery->saveData($saveGallery);
+
+                // Save URL Produk
                 $idslug         =$this->request->getPost('idslug');
 
                 $paramIdRoute   =array('idslug'=>$idslug);
@@ -152,6 +165,8 @@ class Contproduct extends BaseController
 
                 $arrUpdateProduct=array('idslug'=>$idslug);
                 $this->objProduct->updateData($arrUpdateProduct,$idproduk);
+
+
 
                 $this->session->setFlashdata('message','Proses penyimpanana produk berhasil');
                 return redirect()->to(base_url().'/admin/product-list');

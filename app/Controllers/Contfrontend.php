@@ -41,14 +41,21 @@ class Contfrontend extends BaseController
 		return view('front_end',$data);
 	}
 
-	function product()
+	function product($idproduk)
 	{
+
+		$paramProduk			=array('idproduk'=>$idproduk);
+		$produkData 			=$this->objProduct->getDataBy($paramProduk)->getRow();
+
+		$data['main_menu']		=$this->objCategory->getMenuCat();
+		$data['dataProduk']	=$this->objProduct->getDataBy($paramProduk)->getRow();
+		$data['dataGaleri']		=$this->objGallery->getGalByProduct($paramProduk);
 		$data['main_menu']		=$this->objCategory->getMenuCat();
 		$data['page']			='product_page';
 
-		$data['judul_seo']		='product_page';
-		$data['deskripsi_seo']	='product_page';
-		$data['keyword_seo']	='product_page';
+		$data['judul_seo']		=$produkData->judul_seo;
+		$data['deskripsi_seo']	=$produkData->deskripsi_seo;
+		$data['keyword_seo']	=$produkData->keyword_seo;
 
 		return view('front_end',$data);
 	}

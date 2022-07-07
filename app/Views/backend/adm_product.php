@@ -54,7 +54,7 @@
                             { ?>
                                 <tr>
                                     <td><?= $no; ?></td>
-                                    <td><img class="card-img-top img-admin" src="<?= base_url() ?>/assets/img/<?= $itemProduk->thumbnail; ?>"></td>
+                                    <td><img class="card-img-top img-admin" src="<?= base_url() ?>/assets/img/<?= $itemProduk->foto_produk; ?>"></td>
                                     <td><?= $itemProduk->nama_produk; ?></td>
                                     <td><?= $itemProduk->nama_kategori; ?></td>
                                     <td><?= $itemProduk->harga; ?></td>

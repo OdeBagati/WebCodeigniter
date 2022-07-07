@@ -35,7 +35,6 @@ class Mdlroute extends Model
         return $this->builder->countAllResults();
     }
 
-
     function saveData($arrSave)
     {
         if($arrSave['idslug']>0)

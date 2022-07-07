@@ -24,7 +24,7 @@ class Mdlproduct extends Model
 
     function getDataBy($param)
     {
-    	$this->builder->where($param);
+        $this->builder->join('tb_kategori','tb_kategori.idkategori=tb_produk.idkategori')->where($param);
     	return $this->builder->get();
     }
 

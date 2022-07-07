@@ -53,9 +53,7 @@ class Contgallery extends BaseController
 					'alt_foto'			=>$this->request->getPost('alt_foto')
 				);
 
-				// dd($dataSave);
-
-				$idgaleri=$this->objGallery->saveData($dataSave);
+				$this->objGallery->saveData($dataSave);
 
 				$this->session->setFlashdata('message','Foto berhasil disimpan');
 				return redirect()->to(base_url('admin/gallery-list'));
