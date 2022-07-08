@@ -48,7 +48,7 @@
 			<?php foreach($dataProduk->getResult() as $itemProduk) : ?>
 				<div class="col-lg-3 col-md-4 col-12 mt-3 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top position-relative" src="<?= base_url(); ?>/assets/img/<?= $itemProduk->thumbnail; ?>" alt="<?= $itemProduk->alt_thumb;; ?>"  />
+                        <img class="card-img-top position-relative" src="<?= base_url(); ?>/assets/img/<?= $itemProduk->foto_produk; ?>" alt="<?= $itemProduk->alt_foto; ?>"  />
                         <div class="card-body">
                             <h3 class="card-title text-primary"><?= $itemProduk->nama_produk; ?></h3>
                             <p class="card-text"><?= $itemProduk->penjelasan_singkat; ?></p>
@@ -56,7 +56,7 @@
                             <p class="price-after"><strong>$<?= $itemProduk->harga; ?></strong></p>
                         </div>
                         <div class="card-footer">
-                            <a><?= anchor("#",'More Info',array('class'=>'btn btn-info')); ?></a>
+                            <a><?= anchor($itemProduk->url_produk,'More Info',array('class'=>'btn btn-info')); ?></a>
                         </div>
                     </div>
                 </div>

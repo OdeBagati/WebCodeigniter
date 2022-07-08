@@ -23,16 +23,16 @@ class Contproduct extends BaseController
             $data['foto_produk']            =$rec->foto_produk;
             $data['alt_foto']               =$rec->alt_foto;
             $data['penjelasan_singkat']     =$rec->penjelasan_singkat;
-            $data['deskripsi_produk']       =$rec->deskripsi;
+            $data['deskripsi_produk']       =$rec->deskripsi_produk;
             $data['min_kapasitas']          =$rec->min_kapasitas;
             $data['harga']                  =$rec->harga;
             $data['harga_termasuk']         =$rec->harga_termasuk;
             $data['harga_diluar']           =$rec->harga_diluar;
             $data['durasi']                 =$rec->durasi;
             $data['info_tambahan']          =$rec->info_tambahan;
-            $data['judul_seo_produk']       =$rec->judul_seo;
-            $data['deskripsi_seo_produk']   =$rec->deskripsi_seo;
-            $data['keyword_seo_produk']     =$rec->keyword_seo;
+            $data['judul_seo_produk']       =$rec->judul_seo_produk;
+            $data['deskripsi_seo_produk']   =$rec->deskripsi_seo_produk;
+            $data['keyword_seo_produk']     =$rec->keyword_seo_produk;
             $data['idkategori']             =$rec->idkategori;
             $posisi1=strrpos($rec->url_produk,'/');
             $posisi2=strrpos($rec->url_produk,'/',$posisi1+1);
@@ -115,6 +115,7 @@ class Contproduct extends BaseController
                     'harga'             =>$this->request->getPost('harga'),
                     'harga_termasuk'    =>$this->request->getPost('harga_termasuk'),
                     'harga_diluar'      =>$this->request->getPost('harga_diluar'),
+                    'info_tambahan'      =>$this->request->getPost('info_tambahan'),
                     'judul_seo_produk'  =>$this->request->getPost('judul_seo'),
                     'deskripsi_seo_produk'=>$this->request->getPost('deskripsi_seo'),
                     'keyword_seo_produk'=>$this->request->getPost('keyword_seo'),
@@ -122,6 +123,8 @@ class Contproduct extends BaseController
                     'idslug'            =>$this->request->getPost('idslug'),
                     'url_produk'        =>$slug
                 );
+
+                // dd($dataSave);
 
                 $idproduk       =$this->objProduct->saveData($dataSave);
 
@@ -194,14 +197,14 @@ class Contproduct extends BaseController
 
         $idproduk       =$rec->idproduk;
         $idslug         =$rec->idslug;
-        $thumbnail      =$rec->thumbnail;
+        $foto_produk    =$rec->foto_produk;
 
         $paramSlug      =array('idslug'=>$idslug);
         $this->objRoute->deleteData($paramSlug);
 
-        if($thumbnail!="" and $thumbnail!="no-image.jpg" and file_exists(realpath(APPPATH . './assets/img/'.$thumbnail)))
+        if($foto_produk!="" and $foto_produk!="no-image.jpg" and file_exists(realpath(APPPATH . './assets/img/'.$foto_produk)))
         {
-            unlink(realpath(APPPATH . './assets/img/'.$thumbnail));
+            unlink(realpath(APPPATH . './assets/img/'.$foto_produk));
         }
 
         $this->objProduct->deleteData($paramProduct);

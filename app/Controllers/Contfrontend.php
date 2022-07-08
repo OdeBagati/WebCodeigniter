@@ -51,7 +51,6 @@ class Contfrontend extends BaseController
 		$idkategori				=array('idkategori'=>$data['dataProduk']->idkategori);
 		$data['produkList']		=$this->objProduct->getDataBy($idkategori);
 
-		$data['main_menu']		=$this->objCategory->getMenuCat();
 		$data['listProduk']		=$this->objProduct->getDataBy($paramProduk);
 		$data['dataGaleri']		=$this->objGallery->getGalByProduct($paramProduk);
 		$data['main_menu']		=$this->objCategory->getMenuCat();
