@@ -1,0 +1,30 @@
+<p style="text-align: justify; font-size:1.75rem; text-align: justify; "><font color="#000000" face="Segoe UI, sans-serif"><b>Price Include</b></font></p><p style="text-align: justify; ">
+<font color="#000000">
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Hotel pick up and drop off by private/sharing (for Kuta, Seminyak, Nusa Dua, Jimbaran, Sanur area) with english speaking driver<br>
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Approx 30 minutes Seawalker<br>
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Al dive equipment needed<br>
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Changing room, shower, towel, locker facilties<br>
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Coplimentary of mineral water and french fries<br>
+<i class="fa-solid fa-check text-primary"></i>&nbsp;&nbsp;Government tax<br>
+</font>
+</p>
+
+<p style="text-align: justify; font-size: 1.75rem; "><font color="#000000" face="Segoe UI, sans-serif"><b>Price Exclude</b>
+</font></p><p style="text-align: justify; ">
+<font color="#000000">
+<i class="fa-solid fa-xmark text-danger"></i>&nbsp;&nbsp;Personal expenses<br>
+<i class="fa-solid fa-xmark text-danger"></i>&nbsp;&nbsp;Additional charges will be charged (applied) for pick up/drop area at Ubud, Canggu, Balangan, Dreamland, Uluwatu area<br>
+</font>
+</p>
+
+<p style="text-align: justify; font-size:1.75rem; text-align: justify; "><font color="#000000" face="Segoe UI, sans-serif"><b>Additional Info</b></font></p><p style="text-align: justify; ">
+<font color="#000000">
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;Pick up time : 07.30 - 08.30 (depend on your hotel area, exact pick up time will advised on reconfirmation)<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;Depature : 09.00 AM (exact pick up time will be advised on reconfirmation)<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;Tour Duration : 5 - 6 Hours<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;Minimum booking required is 2 adult, for single traveler additional charge will be applied<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;Minimum age to participate is 12 years and maximum is 60 years<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;The payment can be in IDR, US$, Euro or other currency based on the rate on the day<br>
+<i class="fa-solid fa-circle-info text-info"></i>&nbsp;&nbsp;What to bring :  hat, sunblock, extra clothes, and cash money for personal purpose<br>
+</font>
+<p>Cancelation Policy : For a full refund, cancel at least 24 hours in advance of the start date of the tour</p></p>
