@@ -32,7 +32,7 @@ style="background-image: url(<?= base_url(); ?>/assets/img/ulun-danu-temple.jpg)
         <div class="col-12 p-3">
             <div class="card shadow">
                 <div class="card-body text-center">
-                    <a href="#" class="text-decoration-none link-dark">
+                    <a href="<?= $itemKategori->url_kategori; ?>" class="text-decoration-none link-dark">
                         <img class="cat-img" src="<?= base_url(); ?>/assets/img/<?= $itemKategori->thumbnail; ?>">
                         <h3 class="cat-title mt-2"><b><?= $itemKategori->nama_kategori; ?></b></h3>
                     </a>

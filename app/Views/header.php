@@ -5,6 +5,7 @@
     <title><?= $judul_seo; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="<?= $deskripsi_seo; ?>"/>
+    <meta name="robots" content="index, follow"/>
     <meta name="keywords" content="<?= $keyword_seo; ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, srink-to-fit=no"/>
 
@@ -50,9 +51,12 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item mt-1">
+                        <li class="nav-item mt-1 ms-1 me-1">
                             <a class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </li>
+                        <li class="nav-item ms-1 me-1 mt-1">
+                        <a class="nav-link" aria-current="page" href="<?= route_to('cart'); ?>"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
                     </ul>
                 </div>
             </div>

@@ -76,7 +76,8 @@ class BaseController extends Controller
 		$this->objPointExchange	= new Mdlpointexchange;
 		$this->objMaster		= new Mdlmaster;
 		
-		$this->validation 		=\Config\Services::validation();
+		$this->render 			= \Config\Services::renderer();
+		$this->validation 		= \Config\Services::validation();
         $this->session          = \Config\Services::session();
         $this->request          = \Config\Services::request();
 
