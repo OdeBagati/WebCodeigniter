@@ -5,6 +5,7 @@
 	--grey: #f2f2f2;
 	--more-grey: #727272;
 	--light-blue: #00CCFF;
+	--blue:#0D6EfD;
 }
 
 /*Front end CSS*/
@@ -103,11 +104,17 @@ ul.recommendation{
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--gray);
+  background-color: var(--grey);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.75rem;
 }
+	.checkout-review h6{
+		margin-top: -0.75rem;
+		color: var(--blue);
+		font-size: 2rem;
+		font-weight: bold;
+	}
 
 .checkout-details{
   position: relative;

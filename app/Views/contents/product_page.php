@@ -45,7 +45,9 @@
 		</div>
 
 		<div class="col-lg-3 col-sm-12 mt-4">
+			<form action="<?= base_url(); ?>/contcart/insertCart" method="post" enctype="multipart/form-data">
         	<div class="card-booking">
+        		<?= csrf_field(); ?>
             	<div class="card-body">
             		<h2 style=" font-size:25px;">Book Now!</h2>
                     <div class="dropdown-divider"></div>
@@ -63,7 +65,7 @@
                         	<input type="date" name="booking_date" class="form-control"  />
                         </div>
                         <div class="col-12 mt-3 text-center">
-                            <input type="text" name="idproduct" value="" hidden>
+                            <input type="hidden" name="idproduk" value="<?= $dataProduk->idproduk; ?>">
                             <input type="submit" name="submit" class="btn btn-primary text-white" value="Book Now!">
                             </form>
                         </div>
