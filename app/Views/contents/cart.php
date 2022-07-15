@@ -41,7 +41,7 @@
 			<div class="dropdown-divider"></div>
 
 			<div class="checkout-details">
-				<form action="#" method="post" enctype="multipart/form-data">
+				<form action="<?= base_url(); ?>/contcart/next" method="post" enctype="multipart/form-data">
 					<div class="card-body">
 						<h4>Travelers Detail</h4>
 						<?= csrf_field(); ?>
