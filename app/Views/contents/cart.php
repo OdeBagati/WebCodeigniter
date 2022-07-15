@@ -16,7 +16,7 @@
 						<div class="card-body">
 							<div class="row">
 								<div class="col-xl-4 col-md-6 col-sm-12 text-center mt-4">
-									<img class="checkout-img" src="assets/img/<?= $itemCart['photo']; ?>">
+									<img class="checkout-img" src="<?= base_url(); ?>/assets/img/<?= $itemCart['photo']; ?>">
 								</div>
 								<div class="col-xl-8 col-md-6 col-sm-12">
 									<p class="book-date"><i class="fa-solid fa-calendar-check"></i>&nbsp;<?= $itemCart['booking_date']; ?></p>

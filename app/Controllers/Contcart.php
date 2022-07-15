@@ -210,7 +210,7 @@ class Contcart extends BaseController
 
             	$this->session->set('arrOrder',$arrOrder);
 
-            	dd($this->session->get('arrOrder'));
+            	return redirect()->to(base_url().'/checkout');
             }
             else
             {
@@ -238,5 +238,26 @@ class Contcart extends BaseController
 		{
 			return redirect()->back();
 		}
+	}
+
+	function checkout()
+	{
+		$paramPage				=array('idhalaman'=>2);
+		$data['main_menu']		=$this->objCategory->getMenuCat();
+		$data['itemPage']		=$this->objPage->getDataBy($paramPage)
+		->getRow();
+		$data['items']			=$this->session->get('cart');
+		$data['arrOrder']		=$this->session->get('arrOrder');
+		$data['subtotal']		=$this->subtotal();
+		$data['page']			= 'checkout';
+
+		//SEO
+		$data['judul_seo']		=$data['itemPage']->judul_seo;
+		$data['deskripsi_seo']	=$data['itemPage']->deskripsi_seo;
+		$data['keyword_seo']	=$data['itemPage']->keyword_seo;
+		$data['judul_halaman']	=$data['itemPage']->judul_halaman;
+		$data['deskripsi']		=$data['itemPage']->deskripsi;
+
+		return view('front_end',$data);
 	}
 }

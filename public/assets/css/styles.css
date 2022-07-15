@@ -226,3 +226,7 @@ ul.recommendation{
     height: auto;
     max-width: 100%;
 }
+
+.namespace{
+	margin-top: -0.75rem;
+}
