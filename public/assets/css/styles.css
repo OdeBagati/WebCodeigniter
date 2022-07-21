@@ -248,10 +248,10 @@ ul.recommendation{
     color: #fff;
 	}
 
-	.image-container{
-    background: url('../img/tanjung-benoa-parasailing.jpg') center no-repeat;
-    background-size: cover;
-    height: 100vh;
+.image-container{
+	background: url('../img/tanjung-benoa-parasailing-adventure.jpg') center no-repeat;
+	background-size: cover;
+	height: 100vh;
 }
 
 .form-container{

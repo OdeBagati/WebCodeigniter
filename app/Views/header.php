@@ -40,15 +40,16 @@
                     </li>
                 </ul>
 
+                <?php if(logged_in()) : ?>
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Hello, Dear</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Hello, <?= user()->firstname; ?></a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="<?= route_to('logout'); ?>">Logout</a></li>
                             </ul>
                         </li>
                         <li class="nav-item mt-1 ms-1 me-1">
@@ -59,6 +60,26 @@
                     </li>
                     </ul>
                 </div>
+                <?php else : ?>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Hello, Dear</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="<?= route_to('login'); ?>">Login</a></li>
+                                <li><a class="dropdown-item" href="<?= route_to('register'); ?>">Register</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mt-1 ms-1 me-1">
+                            <a class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li class="nav-item ms-1 me-1 mt-1">
+                        <a class="nav-link" aria-current="page" href="<?= route_to('cart'); ?>"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    </ul>
+                </div>
+                <?php endif; ?>
+                
             </div>
         </div>
     </nav>
