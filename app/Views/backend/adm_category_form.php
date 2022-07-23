@@ -3,13 +3,13 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Product Form</h1>
+        <h1 class="h3 mb-0 text-gray-800">Category Form</h1>
     </div>
 
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="<?= route_to('admin'); ?>">Dashboard</a>
-        <li class="breadcrumb-item"><a href="<?= route_to('admin/product-list'); ?>">List Produk</a></li>
-        <li class="breadcrumb-item active">Edit Produk</li>
+        <li class="breadcrumb-item"><a href="<?= route_to('admin/category-list'); ?>">List Kategori</a></li>
+        <li class="breadcrumb-item active">Edit Kategori</li>
     </ol>
 
     <!-- Show Error List -->

@@ -5,9 +5,17 @@ class Contbackend extends BaseController
 {
     public function index()
     {
-        $data['page']   = 'adm_dashboard';
+        if(logged_in())
+        {
+            $data['page']   = 'adm_dashboard';
 
-        return view('back_end',$data);
+            return view('back_end',$data);
+        }
+        else
+        {
+            return redirect()->to('login');
+        }
+        
     }
 
     function register()
