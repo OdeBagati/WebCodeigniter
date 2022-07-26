@@ -5,7 +5,7 @@ class Contproduct extends BaseController
 {
     public function index()
     {
-        if()
+        if(logged_in())
         {
             $data['dataProduk'] = $this->objProduct->getAllProductCat();
             $data['page']       = 'adm_product';
