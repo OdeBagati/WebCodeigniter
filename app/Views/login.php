@@ -22,6 +22,8 @@
 
 					<form action="<?= route_to('login') ?>" method="post">
 
+						<?= view('Myth\Auth\Views\_message_block'); ?>
+
 						<?= csrf_field() ?>
 
 						<div class="form-input">

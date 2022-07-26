@@ -19,13 +19,14 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6 form-container">
 				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
-					<div class="logo mt-5 mb-3">
-						<img src="<?= base_url(); ?>/assets/img/bali-indah.png" width="125px">
-					</div>
+					<!-- <div class="logo mt-5 mb-3">
+						<img src="assets/img/bali-indah.png" width="125px">
+					</div> -->
 					<div class="heading mb-3">
 						<h4>Create an account</h4>
 					</div>
 					<form action="<?= route_to('register') ?>" method="post">
+						<?= view('Myth\Auth\Views\_message_block'); ?>
                         <?= csrf_field(); ?>
 						<div class="row">
 							<div class="col-lg-6 col-sm-12">
@@ -45,21 +46,17 @@
 							<span><i class="fas fa-at"></i></span>
 							<input type="text" name="username" placeholder="Enter Your Username" class="<?php if(session('errors.username')) : ?>is-invalid<?php endif ?>" value="<?= old('username') ?>" required>
 						</div>
-						<div class="mb-3">
+						<!-- <div class="mb-3">
 							<select name="gender" class="form-control">
 								<option selected>Select your gender</option>
 								<option value="male">Male</option>
 								<option value="female">Female</option>
 							</select>
-						</div>
+						</div> -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
 							<input type="text" name="email" placeholder="Enter Your Email Address" class="<?php if(session('errors.email')) : ?>is-invalid<?php endif ?>" value="<?= old('email') ?>" required>
 						</div>
-						<!-- <div class="form-input">
-							<span><i class="fas fa-phone-alt"></i></span>
-							<input type="text" name="phone" placeholder="Phone Number" required>
-						</div> -->
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
 							<input type="password" name="password" placeholder="Enter Your Password" class="<?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" autocomplete="off" required>

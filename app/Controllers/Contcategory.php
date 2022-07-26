@@ -126,25 +126,30 @@ class Contcategory extends BaseController
         }
         else
         {
-            return redirect()->to('login');
+            return redirect()->to(base_url().'/login');
         }
-
-        
     }
 
     function delete($idkategori)
     {
-        $paramCat       =array('idkategori'=>$idkategori);
-        $rec            =$this->objCategory->getDataBy($paramCat)->getRow();
+        if(logged_in())
+        {
+            $paramCat       =array('idkategori'=>$idkategori);
+            $rec            =$this->objCategory->getDataBy($paramCat)->getRow();
 
-        $idkategori     =$rec->idkategori;
-        $idslug         =$rec->idslug;
+            $idkategori     =$rec->idkategori;
+            $idslug         =$rec->idslug;
 
-        $paramSlug      =array('idslug'=>$idslug);
-        $this->objRoute->deleteData($paramSlug);
-        $this->objCategory->deleteData($paramCat);
+            $paramSlug      =array('idslug'=>$idslug);
+            $this->objRoute->deleteData($paramSlug);
+            $this->objCategory->deleteData($paramCat);
 
-        $this->session->setFlashdata('message','Kategori berhasil dihapus');
-        return redirect()->to(base_url().'/admin/category-list');
+            $this->session->setFlashdata('message','Kategori berhasil dihapus');
+            return redirect()->to(base_url().'/admin/category-list');
+        }
+        else
+        {
+            return redirect()->to(base_url().'/login');
+        }
     }
 }

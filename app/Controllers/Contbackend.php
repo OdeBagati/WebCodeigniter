@@ -17,9 +17,4 @@ class Contbackend extends BaseController
         }
         
     }
-
-    function register()
-    {
-        return view('register');
-    }
 }
