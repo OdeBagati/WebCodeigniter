@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	
-    <title><?= $judul_seo; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="<?= $deskripsi_seo; ?>"/>
     <meta name="robots" content="index, follow"/>
@@ -15,7 +14,9 @@
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/fontawesome.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/bootstrap.5.min.css'); ?>" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/styles.css'); ?>" /> 
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/styles.css'); ?>" />
+
+    <title><?= $judul_seo; ?></title>
 </head>
 <body>
 

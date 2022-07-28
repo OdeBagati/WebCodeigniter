@@ -3,8 +3,8 @@
 	<!-- Breadcrumb -->
 	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="<?= base_url(); ?>">Home</a></li>
-			<li class="breadcrumb-item"><a href="#" class="text-decoration-none"><?= $dataProduk->nama_kategori; ?></a></li>
+			<li class="breadcrumb-item"><a href="<?= base_url(); ?>" class="text-decoration-none">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?= base_url(); ?>/<?= $dataProduk->url_kategori; ?>" class="text-decoration-none"><?= $dataProduk->nama_kategori; ?></a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?= $dataProduk->nama_produk; ?></li>
 		</ol>
 	</nav>
