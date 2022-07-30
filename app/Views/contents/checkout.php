@@ -81,7 +81,10 @@
 					<p class="h5">(account owner)<br><br>Minimum payment is 25% of total payment</p>
 				</div>
 				<div class="modal-footer">
-					<a href="<?= base_url(); ?>" type="button" class="btn btn-primary">Save changes</a>
+					<form action="<?= base_url(); ?>/contcart/finish" method="post" enctype="multipart/form-data">
+						<?= csrf_field(); ?>
+						<input type="submit" name="submit" value="Submit" class="btn btn-primary text-center">
+					</form>
 				</div>
 			</div>
 		</div>

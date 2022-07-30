@@ -4,18 +4,16 @@ use CodeIgniter\Model;
 
 class Mdlorder extends Model
 {
-	protected $table      = 'joyful_order';
+	protected $table      = 'tb_order';
     protected $primaryKey = 'idorder';
 
     protected $builder;
     protected $db;
 
-    protected $allowedFields = ['idorder','idcustomer','order_date','qty','total','point','status'];
-
     function __construct()
     {
     	$this->db      = \Config\Database::connect();
-		$this->builder = $this->db->table('joyful_order');
+		$this->builder = $this->db->table('tb_order');
     }
 
     function getDataBy($param)
@@ -27,15 +25,14 @@ class Mdlorder extends Model
    function getAllOrder()
    {
    		$this->builder->select('*');
-        $this->builder->join('users','users.id=joyful_order.idcustomer');
+        $this->builder->join('users','users.id=tb_order.idcustomer');
         return $this->builder->get();
    }
 
    function getAllOrderBy($param)
    {
         $this->builder->select('*');
-        $this->builder->join('users','users.id=joyful_order.idcustomer');
-        // $this->builder->join('payment_method','payment_method.idpayment=joyful_order.idpayment');
+        $this->builder->join('users','users.id=tb_order.idcustomer');
         $this->builder->where($param);
         return $this->builder->get();
    } 
@@ -67,24 +64,4 @@ class Mdlorder extends Model
         $this->builder->where($param);
         return $this->builder->delete();
     }
-
-    function getUserPoint()
-    {
-        //SELECT SUM(point) FROM `joyful_order` WHERE idcustomer=12 AND (status='paid' OR status='done')
-        //$this->builder->join('joyful_order','joyful_order.idorder=users.id')
-        // $builder = $this->db->table('joyful_order');
-        // $builder->selectSum('point');
-        // $query = $builder->get();
-
-        $this->builder->selectSum('point');
-
-        return $this->builder->get();
-        // ->orGroupStart()
-        // ->where('joyful_order.status','paid')
-        // ->where('joyful_order.status','done')
-        // ->groupEnd();
-        // $this->builder->and('status','paid');
-        // $this->builder->or('status','done');
-    }
-
 }

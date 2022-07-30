@@ -278,59 +278,61 @@ class Contcart extends BaseController
 
 	function finish()
 	{
-		// $itemOrder		=$this->session->get('arrOrder');
+		$itemOrder		=$this->session->get('arrOrder');
 
-		// //Save data Order
-		// if(logged_in())
-		// {
-		// 	$arrSaveOrder=array(
-		// 		'idorder'		=>'',
-		// 		'idcustomer'	=>user()->id,
-		// 		'nama_customer'	=>user()->firstname.' '.user()->lastname,
-		// 		'tgl_order'		=>date("Y-m-d h:i:s"),
-		// 		'pickup'		=>$itemOrder['pickup'],
-		// 		'qty'			=>$this->total_qty(),
-		// 		'total'			=>$total_paid,
-		// 		'payment'		=>'transfer',
-		// 		'status_order'	=>'order',
-		// 		'status_cancel'	=>'no',
-		// 	);
-		// }
-		// else
-		// {
-		// 		$arrSaveOrder=array(
-		// 		'idorder'		=>'',
-		// 		'idcustomer'	=>'0',
-		// 		'nama_customer'	=>$itemOrder['firstname'].' '.$itemOrder['lastname'],
-		// 		'tgl_order'		=>date("Y-m-d h:i:s"),
-		// 		'pickup'		=>$itemOrder['pickup'],
-		// 		'qty'			=>$this->total_qty(),
-		// 		'total'			=>$total_paid,
-		// 		'payment'		=>'transfer',
-		// 		'status_order'	=>'order',
-		// 		'status_cancel'	=>'no',
-		// 	);
-		// }
+		//Save data Order
+		if(logged_in())
+		{
+			$arrSaveOrder=array(
+				'idorder'		=>'',
+				'idcustomer'	=>user()->id,
+				'nama_customer'	=>user()->firstname.' '.user()->lastname,
+				'tgl_order'		=>date("Y-m-d h:i:s"),
+				'pickup'		=>$itemOrder['pickup'],
+				'qty'			=>$this->total_qty(),
+				'total'			=>$this->subtotal(),
+				'payment'		=>'transfer',
+				'status_order'	=>'order',
+				'status_cancel'	=>'no',
+			);
+		}
+		else
+		{
+				$arrSaveOrder=array(
+				'idorder'		=>'',
+				'idcustomer'	=>'0',
+				'nama_customer'	=>$itemOrder['firstname'].' '.$itemOrder['lastname'],
+				'tgl_order'		=>date("Y-m-d h:i:s"),
+				'pickup'		=>$itemOrder['pickup'],
+				'qty'			=>$this->total_qty(),
+				'total'			=>$this->subtotal(),
+				'payment'		=>'transfer',
+				'status_order'	=>'order',
+				'status_cancel'	=>'no',
+			);
+		}
 		
-		// $idorder=$this->objOrder->saveData($arrSaveOrder);
+		$idorder=$this->objOrder->saveData($arrSaveOrder);
 
-		// //Save detail Order
-		// $items=$this->session->get('cart');
-		// foreach($items as $item)
-		// {
-		// 	$arrDetailOrder=array(
-		// 		'iddetailorder'		=>'',
-		// 		'idorder'			=>$idorder,
-		// 		'idproduk'			=>$item['idproduk'],
-		// 		'tgl_booking'		=>$item['booking_date'],
-		// 		'harga_jual'		=>$item['harga'],
-		// 		'subqty'			=>$item['qty'],
-		// 		'subtotal'			=>$item['harga']*$item['qty'],
-		// 	);
+		//Save detail Order
+		$items=$this->session->get('cart');
+		foreach($items as $item)
+		{
+			$arrDetailOrder=array(
+				'iddetailorder'		=>'',
+				'idorder'			=>$idorder,
+				'idproduk'			=>$item['idproduk'],
+				'tgl_booking'		=>$item['booking_date'],
+				'harga_jual'		=>$item['harga'],
+				'subqty'			=>$item['qty'],
+				'subtotal'			=>$item['harga']*$item['qty'],
+			);
 
-		// $this->objDetailorder->saveData($arrDetailOrder);
-		// }
+		$this->objDetailorder->saveData($arrDetailOrder);
+		}
 
-		return redirect()->to(base_url().'/thank-you');
+		$this->session->remove('cart','arrOrder');
+
+		return redirect()->to(base_url().'/cart');
 	}
 }
